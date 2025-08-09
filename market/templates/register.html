@@ -5,7 +5,7 @@ block content %}
     {{ form.hidden_tag() }}
     <!--  for safety purpose   -->
     <br />
-    <h1>Please Create your Account</h1>
+    <h1 class="text-center">Please Create your Account</h1>
     <br />
     {{form.username.label()}} {{form.username(class="form-control" ,
     placeholder="User Name")}} {{form.email_address.label()}}
@@ -14,6 +14,12 @@ block content %}
     ,placeholder="Password")}} {{form.password2.label()}}
     {{form.password2(class="form-control" , placeholder="Confirm Password")}}
     <br />
+    <div class="checkbox mb-3 text-center">
+      <h6>Already have an Account</h6>
+      <a class="btn btn-sm btn-secondary" href="{{url_for('login_page')}}"
+        >Login</a
+      >
+    </div>
     {{ form.submit(class="btn btn-lg btn-block btn-primary text-center")}}
   </form>
 </div>
